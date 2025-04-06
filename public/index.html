@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Oblivion is a fast web proxy designed to bypass internet censorship.">
+  <meta name="keywords" content="proxy, bypass, unblocked, oblivion, oblivion proxy, oblivion unblocked, oblivion proxy unblocked, oblivion unblocked proxy, oblivion proxy bypass, oblivion bypass">
+  <meta name="author" content="ImperiumServices">
+  <title>Oblivion</title>
+  <link href="/style/main.css" rel="stylesheet" type="text/css" />
+  <link href="/style/header.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/images/logo/favi-invert-32x32.png">
+  <script type="application/json">
+    {
+      "Discord": "https://discord.com/invite/n9DsDFmzd6",
+      "Github": "https://github.com/ImperiumServices"
+    }
+  </script>
+</head>
+<body>
+  <script src="/scripts/header.js"></script>
+  <main>
+    <p class="title">Oblivion</p>
+    <form action="a.html" method="GET">
+      <input placeholder="Search Freely" name="url">
+    </form>
+    <div id="apps">
+      <div class="app" id="app" onclick="uv('https://tiktok.com')">
+        <img src="/images/apps/tiktok.webp" alt="TikTok">
+        <p class="app-title">TikTok</p>
+      </div>
+      <div class="app" id="app" onclick="uv('https://discord.com')">
+        <img src="/images/apps/discord.jpg" alt="Discord">
+        <p class="app-title">Discord</p>
+      </div>
+      <div class="app" id="app" onclick="uv('https://instagram.com')">
+        <img src="/images/apps/insta.png" alt="Instagram">
+        <p class="app-title">Instagram</p>
+      </div>
+      <div class="app" id="app" onclick="uv('https://snapchat.com')">
+        <img src="/images/apps/snapchat.png" alt="Snapchat">
+        <p class="app-title">Snapchat</p>
+      </div>
+      <div class="app" id="app" onclick="uv('https://twitter.com')">
+        <img src="/images/apps/twitter.png" alt="Twitter">
+        <p class="app-title">Twitter</p>
+      </div>
+      <div class="app" id="app" onclick="uv('https://crazygames.com')">
+        <img src="/images/apps/crazygames.png" alt="CrazyGames">
+        <p class="app-title">CrazyGames</p>
+      </div>
+    </div>
+  </main>
+  <script>
+  function uv(link) {
+    window.location.href = `a.html?url=${encodeURIComponent(link)}`;
+  }
+  </script>
+  <script src="/scripts/time.js"></script>
+    <script src="/proxy/oblivion.config.js"></script>
+  <script src="/proxy/oblivion.client.js"></script>
+  <script src="/proxy/oblivion.server.js"></script>
+</body>
+</html>
