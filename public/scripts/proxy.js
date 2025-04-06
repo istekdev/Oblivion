@@ -37,4 +37,54 @@ function exit() {
 	frame.src = "";
 }
 
+function full() {
+  var frame = document.getElementById('frame');
+  if (frame.requestFullscreen) {
+    frame.requestFullscreen();
+  } else if (frame.webkitRequestFullscreen) {
+    frame.webkitRequestFullscreen();
+    } else if (frame.msRequestFullscreen) {
+    frame.msRequestFullscreen();
+    } else {
+    console.log("old bropwser dosent support full");
+  }
+}
+
+function redir(title, favi) {
+    const frame = document.getElementById('frame');
+    let inFrame;
+    
+    try {
+        inFrame = window !== top;
+    } catch (e) {
+        inFrame = true;
+    }
+
+    if (!inFrame && !navigator.userAgent.includes("Firefox")) {
+        const popup = window.open("about:blank", "_blank");
+
+        if (!popup || popup.closed) {
+        } else {
+            const doc = popup.document;
+
+            doc.title = title;
+
+            const iframe = doc.createElement("iframe");
+            const style = iframe.style;
+            iframe.src = frame.src;
+            style.position = "fixed";
+            style.top = style.bottom = style.left = style.right = 0;
+            style.border = style.outline = "none";
+            style.width = style.height = "100%";
+
+            doc.body.appendChild(iframe);
+
+            location.replace("https://www.google.com");
+        }
+    }
+}
+
+function uvab() {
+    redir("about:blank", "/images/cloak/about-blank.png");
+}
 
