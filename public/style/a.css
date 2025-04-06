@@ -7,7 +7,7 @@ main {
 }
 
 #tabs {
-  display: flex;
+  display: none;
   align-items: center;
   padding: 8px;
   background-color: #121212;
@@ -86,7 +86,7 @@ nav {
   width: 100vw;
   height: 100%;
   border: none;
-  display: block;
+  display: none;
   position: absolute;
   z-index: 199;
 }
