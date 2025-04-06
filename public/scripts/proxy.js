@@ -3,6 +3,8 @@ const wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + locati
 const bareUrl = (location.protocol === "https:" ? "https" : "http") + "://" + location.host + "/bare/"
 const frame = document.getElementById("frame");
 const inputs = document.querySelectorAll("#top-search, input");
+const frame = document.getElementById("frame");
+const tabs = document.getElementById("tabs");
 
 inputs.addEventListener("keydown", async function (event) {
 	if (event.key === "Enter") {
@@ -24,9 +26,15 @@ inputs.addEventListener("keydown", async function (event) {
 });
 
 function uv(link) {
-	var frame = document.getElementById("frame");
-	var tabs = document.getElementById("tabs");
 	frame.style.display = "block";
 	tabs.style.display = "flex";
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(link);
 }
+
+function exit() {
+	frame.style.display = "none";
+	tabs.style.display = "none";
+	frame.src = "";
+}
+
+
